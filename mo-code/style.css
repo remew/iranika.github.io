@@ -3,7 +3,7 @@ body{
 }
 
 div{
-  width: 100%;
+  /*width: 100%;*/
   text-align: center;
 }
 div#view{
@@ -46,4 +46,3 @@ figcaption{
 .hidden-image{
   display: none;
 }
-
