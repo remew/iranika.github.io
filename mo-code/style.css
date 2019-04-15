@@ -30,11 +30,29 @@ a {
   z-index: 20;
 }
 
-figcaption{
+.hidden-image{
+  display: none;
+}
+
+.footer{
+  padding-top: 30px;
+  padding-bottom: 50px;
   background-color: white;
   font-size: 70%;
 }
-
-.hidden-image{
-  display: none;
+.footer-promotion{
+  padding-top: 30px;
+  background-color: white;
+}
+.footer-note{
+  padding-top: 30px;
+  padding-bottom: 30px;
+  background-color: white;
+  font-size: 70%; /* (1 / footer) / footer-note */
+}
+.footer-note-links{
+  font-family: Lato;
+  margin-right: 10px;
+  margin-left: 10px;
+  
 }
