@@ -5,27 +5,37 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./modal.css">
     <meta charset="utf-8">
+    <script src="./4komaData.js"></script>
+    <script src="./viewer.js"></script>
   </head>
   <body id="body">
     <div class="modal">
       <input class="modal-check" type="checkbox" id="modal-check">
       <div class="modal-body">
         <div class="modal-window">
-          <label class="modal-label" for="modal-check">
+          <label class="modal-label" for="modal-check" style="right:-16">
             <svg width="16" height="16">
               <polygon points="14.4,3.1 12.9,1.6 8,6.6 3.1,1.6 1.6,3.1 6.6,8 1.6,12.9 3.1,14.4 8,9.4 12.9,14.4 14.4,12.9 9.4,8 "></polygon>
             </svg>
           </label>
           <div class="modal-inner">
             <div class="modal-content">
-              <h2>ももいろこーどびゅーあー</h2>
-              <p>道草屋の漫画ビューアーです。</p>
-              <p>スクロールすると次のページが自動で読み込まれます。</p>
-              <p>自動で読み込まれない際は下部の続きを表示を押下してください。</p>
-              <p>右上のメニューから好きな話数にジャンプ出来ます。</p>
-              <p>スマホの場合は画面を横にすると見やすい気がします。</p>
-              <p>Chrome推奨です(他のブラウザは動作保証しません)</p>
-              <figcaption>
+              <h2>みちくさびゅあー</h2>
+              <div class="site-description">
+              これは道草屋の漫画ビューアーです。<br>
+              スクロールすると次のページが自動で読み込まれます。<br>
+              自動で読み込まれない際は下部の続きを表示を押下してください。<br>
+              右上のメニューから好きな話数にジャンプ出来ます。<br>
+              スマホの場合は画面を横にすると見やすい気がします。<br>
+              Chrome推奨です(他のブラウザは動作保証しません)<br>
+              </div>
+              <div class="site-infomation">
+                <label for="modal-check">
+                    <a class="site-infomation-textlink" >最初から読む</a>
+                    <a class="site-infomation-textlink" onclick="lastShowImage()">新作から読む</a>    
+                </label>
+              </div>
+              <div class="site-caption">
                 注意<br>
                 画像(漫画)は<a href="http://momoirocode.web.fc2.com/">桃色CODE様</a>から直リンクで参照しています。<br>
                 画像の著作権は桃色CODE様にあり、iranikaにはありません。<br>
@@ -33,7 +43,7 @@
                 ビューアーの不具合のお問い合わせは<a href="https://twitter.com/happy_packet">いらにか(twitter)</a>までお願いします。<br>
                 桃色CODE様には問い合わせないでください。<br>
                 Twitter:<a href="https://twitter.com/happy_packet">@happy_packet</a><br>
-              </figcaption>
+              </div>
             </div>
           </div>
         </div>
@@ -53,12 +63,24 @@
       <br>
       <br>
     </div>
-    <div id="footer"></div>
-    <script src="./4komaData.js"></script>
+    <div id="footer">
+      <div class="footer-promotion">
+        道草屋についてもっと知りたくなった人は、<br>
+        サークルサイト「<a href="http://momoirocode.web.fc2.com/">桃色CODE</a>」をチェック♪<br>
+        もしくは<a href="https://www.dlsite.com/home/circle/profile/=/maker_id/RG24350.html">DLSite</a>/<a href="https://momotori.booth.pm/">Booth</a>のサークルページへGo!!<br>
+        (DLSiteとBoothはR指定があるので未成年の方は注意)<br>
+      <div>
+      <div class="footer-note">
+        みちくさびゅあーは道草屋の著作者である桃鳥様から<br>
+        許諾を得てiranikaがを提供・公開しています。<br>
+        <div>
+          <a class="footer-note-links" href="https://github.com/iranika/iranika.github.io/tree/master/mo-code">Github</a>
+          <a class="footer-note-links" href="https://twitter.com/happy_packet">Twitter</a>
+        </div>
+        みちくさびゅーあー ©2019 iranika(@happy_packet)
+      </div>
+    </div>
     <script src="./mocode.js"></script>
-    <script src="./viewer.js"></script>
-    <script>
-    </script>
   </body>
 </html>
 

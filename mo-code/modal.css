@@ -35,8 +35,8 @@ label.link {
 }
 .modal .modal-label {
   position: absolute;
-  top: -20px;
-  right: 5px;
+  top: -10px;
+  right: -10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,8 +76,37 @@ label.link {
   animation: zoomout 0.2s 1 forwards;
 }
 
-p{
-  font-size: 80%;
+
+.site-description{
+  background-color: white;
+  font-size: 70%;
+}
+
+.site-caption{
+  padding-top: 30px;
+  background-color: white;
+  font-size: 70%;
+}
+
+.site-infomation{
+  padding-top: 30px;
+}
+.site-infomation-textlink{
+  background: #EEEEEE;
+  box-shadow: 3px 3px rgba(0,0,0,0.2);
+  color: #333;
+  flex: none;
+  font-family: Lato;
+  font-size: 100%;
+  font-weight: 400;
+  height: 58px;
+  text-align: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 10px;
+  width: 148px;
+  max-width: 100%;
+  justify-content: center;
 }
 
 @keyframes fadein {

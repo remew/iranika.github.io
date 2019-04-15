@@ -13,7 +13,7 @@ var conf = {
 
 window.onload = () => {
   //document.getElementById("view").innerHTML = ""
-  initShowImage(page.current)
+  initShowImage(page.current) //モーダルに最初から読むを実装したため、初期化処理からは除外
 
   viewer.addTitleToSideBar("rightMenu")
   
@@ -48,6 +48,10 @@ function initShowImage(pageNum){
   addHiddenImage(pageNum + 1)
   page.current = pageNum + 1
   viewer.closeRightMenu()
+}
+
+function lastShowImage(){
+  initShowImage(page.length)
 }
 
 function showHiddenImage(){
