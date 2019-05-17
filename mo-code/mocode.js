@@ -63,13 +63,28 @@ function showHiddenImage(){
   }
 }
 
+function onhold(antiEventName){
+  let time = 0
+  const interval = setInterval(() => {
+    time += 100
+    if (time > 1000){
+      alert("長押しされたよ")
+      clearInterval(interval)
+    }
+  }, 100)
+  this.addEventListener(antiEventName, function (event){
+    event.preventDefault()
+    clearInterval(interval)
+  })
+}
+
 function addHiddenImage(pageNum){
   if (pageNum > page.length){
     return
   }
   var pg = pageData[pageNum]
   pg.ImagesUrl.forEach(img_url => {
-    elem.view.innerHTML += `<img class="hidden-image" src="${img_url}">`
+    elem.view.innerHTML += `<img class="hidden-image" src="${img_url}" onmousedown="onhold('mouseup')" touchstart="onhold('touchend')">`
   })
 }
 
