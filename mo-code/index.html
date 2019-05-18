@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="./modal.css">
     <script src="./4komaData.js"></script>
-    <script src="./viewer.js"></script>
     <title>みちくさびゅあー</title>
   </head>
   <body id="body">
@@ -38,7 +37,7 @@
               <div class="site-infomation">
                 <label for="modal-check">
                     <a class="site-infomation-textlink" >最初から読む</a>
-                    <a class="site-infomation-textlink" onclick="lastShowImage()">新作から読む</a>
+                    <a class="site-infomation-textlink" onclick="viewer.lastShowImage()">新作から読む</a>
                 </label>
               </div>
               <div class="site-caption">
@@ -61,7 +60,7 @@
     <button class="w3-button w3-teal w3-xxxlarge w3-right dock-button" onclick="viewer.openRightMenu()">&#9776;</button>
     <div id="view"></div>
     <div id="footer">
-      <a id="more" >続きを表示</a>
+      <a type="button" id="more" onclick="viewer.showMore()" >続きを表示</a>
       <br>
       <br>
       <br>
