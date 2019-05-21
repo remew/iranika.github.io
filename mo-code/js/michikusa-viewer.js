@@ -84,10 +84,11 @@ const viewer = (()=>{
 
 window.onload = ()=>{
   hash = location.hash.replace("#", "")
-  if (!isNaN(hash)){
-    viewer.initShowImage(hash)
-  }else{
+  if (isNaN(hash) || hash == ""){
+    document.getElementById("modal").style.display = "block"　//モーダルの表示
     viewer.initShowImage(viewer.page.current)
+  }else{
+    viewer.initShowImage(parseInt(hash) -1) //話数と合わせるために-1する
   }
   viewer.addTitleToElement(viewer.elem.rightMenu)
   var triggerMargin = 5
