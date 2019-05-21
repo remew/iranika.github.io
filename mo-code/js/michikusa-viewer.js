@@ -1,17 +1,17 @@
 //viewerObjectの定義
 const viewer = (()=>{
   return {
-    elem : {
+    elem : { //Viewer関連のElementsObject
       view : document.getElementById("view"),
       more : document.getElementById("more"),
       footer : document.getElementById("footer"),
       rightMenu : document.getElementById("rightMenu"),
     },
-    conf : {
+    conf : { //Viewer関連の設定情報
       isAutoShowMore : true
     },
     pageData : pageData,
-    page : {
+    page : { //pageに関する変数
       length : pageData.length -1,
       _current : 0,
       get current(){
@@ -83,7 +83,12 @@ const viewer = (()=>{
 })();
 
 window.onload = ()=>{
-  viewer.initShowImage(viewer.page.current)
+  hash = location.hash.replace("#", "")
+  if (!isNaN(hash)){
+    viewer.initShowImage(hash)
+  }else{
+    viewer.initShowImage(viewer.page.current)
+  }
   viewer.addTitleToElement(viewer.elem.rightMenu)
   var triggerMargin = 5
   //sub funcions
