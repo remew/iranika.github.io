@@ -1,6 +1,7 @@
 //viewerObjectの定義
 const viewer = (()=>{
   return {
+    /* Properties */
     elem : { //Viewer関連のElementsObject
       view : document.getElementById("view"),
       more : document.getElementById("more"),
@@ -26,9 +27,7 @@ const viewer = (()=>{
         this._current = pageNum
       },
     },
-    /**
-     * @param {element} a some HTMLElement
-     */
+    /* Methods */
     openRightMenu : (element=viewer.elem.rightMenu)=>{
       element.style.display = "block";
     },
@@ -78,6 +77,7 @@ const viewer = (()=>{
       viewer.pageData[pageNum].ImagesUrl.forEach(img_url => {
         viewer.elem.view.innerHTML += `<img class="hidden-image" src="${img_url}">`
       })
+      viewer.elem.view.innerHTML += `<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" class="twitter-share-button hidden-image" data-text="ここすき！！" data-url="https://yurika.iranika.info/mo-code/index.html#${pageNum +1}" data-hashtags="#みちくさびゅあー" data-lang="ja" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>`
     }
   }
 })();
